@@ -135,18 +135,23 @@ const HomePage = () => {
             <h3 className="text-primary font-semibold text-2xl mt-4">
               Years of Experience
             </h3>
-            <p>
-              We partner with over 320 amazing projects worldwide, and have
-              given over $150 million in cash and product grants to other groups
-              since 2011. We also operate our own dynamic suite of Signature
-              Programs.
-              <ul className="space-y-3 list-disc list-inside">
-                <li>This mistaken idea of denouncing pleasure</li>
-                <li>Master-builder of human happiness</li>
-                <li>Occasionally circumstances occur in toil</li>
-                <li>Undertakes laborious physical exercise</li>
-              </ul>
-            </p>
+            <div>
+              <div>
+                <p>
+                  We partner with over 320 amazing projects worldwide, and have
+                  given over $150 million in cash and product grants to other
+                  groups since 2011. We also operate our own dynamic suite of
+                  Signature Programs.{" "}
+                </p>
+
+                <ul className="space-y-3 list-disc list-inside">
+                  <li>This mistaken idea of denouncing pleasure</li>
+                  <li>Master-builder of human happiness</li>
+                  <li>Occasionally circumstances occur in toil</li>
+                  <li>Undertakes laborious physical exercise</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
