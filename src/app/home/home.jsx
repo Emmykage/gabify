@@ -4,7 +4,6 @@ import Button from "@/components/button/Button";
 import Header from "@/components/header/header";
 import CausesSection from "@/components/progressSection/ProgressSection";
 import SectionTitle from "@/components/sectionTitles/sectionTitle";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 import imageProgram1 from "@/assets/images/IMG_6201.jpeg";
