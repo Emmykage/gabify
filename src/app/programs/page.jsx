@@ -1,25 +1,15 @@
 "use client";
-import AnalysisMeasure from "@/components/analysisMeasure/AnalysisMeasure";
-import Button from "@/components/button/Button";
-import Header from "@/components/header/header";
-import CausesSection from "@/components/progressSection/ProgressSection";
+
 import SectionTitle from "@/components/sectionTitles/sectionTitle";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 import React from "react";
 import imageProgram1 from "@/assets/images/IMG_6201.jpeg";
 import sportVector from "@/assets/svg/gym-running-foot-run-svgrepo-com.svg";
-import kidBlind from "@/assets/images/kidBlind.webp";
+// import kidBlind from "@/assets/images/vissionkid.webp";
 import sportFestival from "@/assets/images/IMG_6313.jpeg";
 import Image from "next/image";
-import imgblog from "@/assets/images/IMG_6246.jpeg";
 import CTA from "@/components/CTA/CTA";
-import Testimonials from "@/components/testimonials/Testimonials";
 import Navbar from "@/components/nav/Navbar";
-import PageTitle from "@/components/pageTitle/PageTitle";
-import sportIcon from "@/assets/svg/gym-running-foot-run-svgrepo-com.svg";
-import heroImg from "/public/background/about-img.jpg"; // replace with your real image
-import { motion } from "framer-motion";
+
 const programs = [
   {
     title: "Athletic Training",
@@ -99,11 +89,11 @@ const page = () => {
               image: imageProgram1,
               desc: "Tailored sports coaching for individuals with disabilities.",
             },
-            {
-              title: "School Outreach",
-              image: kidBlind,
-              desc: "Partnering with schools to promote inclusive physical education.",
-            },
+            // {
+            //   title: "School Outreach",
+            //   image: kidBlind,
+            //   desc: "Partnering with schools to promote inclusive physical education.",
+            // },
             {
               image: sportFestival,
               title: "Community Sports Festivals",

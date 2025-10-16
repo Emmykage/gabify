@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import imageProgram1 from "@/assets/images/IMG_6201.jpeg";
 import sportVector from "@/assets/svg/gym-running-foot-run-svgrepo-com.svg";
-import kidBlind from "@/assets/images/kidblind.webp";
+import kidBlind from "@/assets/images/vissionkid.webp";
 import sportFestival from "@/assets/images/IMG_6313.jpeg";
 import Image from "next/image";
 import imgblog from "@/assets/images/IMG_6246.jpeg";
