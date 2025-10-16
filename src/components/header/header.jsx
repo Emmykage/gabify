@@ -3,11 +3,9 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../nav/Navbar";
 import headerBg from "@/assets/background/gabifyheader.jpg";
 import headerBg1 from "@/assets/images/IMG_6295.jpeg";
-import Image from "next/image";
-import Assets from "@/assets/assets";
+
 import "hero-slider/dist/index.css";
-import HeroSlider, { MenuNav, Nav, Overlay, SideNav, Slide } from "hero-slider";
-import Link from "next/link";
+import HeroSlider, { MenuNav, Nav, SideNav, Slide } from "hero-slider";
 
 const Header = () => {
   const [deviceType, setdeviceType] = useState("windows");
