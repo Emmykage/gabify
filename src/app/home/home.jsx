@@ -45,7 +45,7 @@ const HomePage = () => {
   ];
   const router = useRouter();
   return (
-    <div className="pt- about fixed w-full top-0 left-0 h-screen overflow-y-auto ">
+    <div className="pt- about w-full top-0 left-0 h-screen overflow-y-auto ">
       <Header />
       <section className="bg-gray py-20 text-center px-4">
         <div className="max-w-7xl m-auto grid md:grid-cols-2">
@@ -303,7 +303,7 @@ const HomePage = () => {
         id="contact"
         className="py-20  px-4 bg-[url(/background/noise.jpg)]"
       >
-        <div className="flex max-w-7xl m-auto ">
+        <div className="flex flex-col md:flex-row gap-5 max-w-7xl m-auto ">
           <div className="flex-1">
             <h2 className="text-5xl font-extrabold text-center leading-[60px]">
               They <br />
@@ -312,7 +312,7 @@ const HomePage = () => {
               <span className="text-primary">Help...</span>
             </h2>
           </div>
-          <form className="max-w-2xl flex-1 mx-auto grid gap-6">
+          <form className="max-w-2xl w-full flex-1 mx-auto grid gap-6">
             <input
               type="text"
               placeholder="Full Name"
