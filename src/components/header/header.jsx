@@ -5,7 +5,7 @@ import headerBg from "@/assets/background/gabifyheader.jpg";
 import headerBg1 from "@/assets/images/IMG_6295.jpeg";
 
 import "hero-slider/dist/index.css";
-import HeroSlider, { MenuNav, Nav, SideNav, Slide } from "hero-slider";
+import HeroSlider, { MenuNav, Nav, Overlay, SideNav, Slide } from "hero-slider";
 
 const Header = () => {
   const [deviceType, setdeviceType] = useState("windows");
@@ -29,7 +29,7 @@ const Header = () => {
       title: "Hand to make better life for childer",
       info: () => (
         <div className="md:m-auto sm:max-w-4xl mx-9  lg:max-w-7xl px-4 mt -20  text-white z-10   w-full">
-          <div className="max-w-xl py-10 bg-gray-600/30 rounded-xl pl-8">
+          <div className="max-w-xl py-10 px-4 bg-gray-600/30 rounded-xl pl-8">
             <h3 className="text-white text-3xl font-bold tracking-wide">
               Hand to make better life for childer
             </h3>
@@ -102,9 +102,9 @@ const Header = () => {
           console.debug("onAfterSliding(nextSlide): ", nextSlide),
       }}
     >
-      <div className="bg-gray-900/30 h-full pointer-events-none w-full absolute top-0 left-0 z-10">
-        <Navbar />
-      </div>
+      {/* <Overlay className="bg-gray-900 h-full pointer-events- w-full absolute top-0 left-0 z-10"> */}
+      <Navbar className="" />
+      {/* </Overlay> */}
       {items.map((item) => (
         <Slide
           key={item.id}
@@ -118,7 +118,7 @@ const Header = () => {
             backgroundSize: "cover",
           }}
         >
-          <div className="min h-full flex  m-auto relative w-full justify-center items-center">
+          <div className="min h-full bg-gray-900/30  flex  m-auto relative w-full justify-center items-center">
             {item.info()}
           </div>
         </Slide>
