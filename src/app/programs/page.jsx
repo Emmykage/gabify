@@ -181,7 +181,7 @@ const page = () => {
         </section> */}
 
         {/* ===== SPORTS FOCUS ===== */}
-        <section className="py-20 bg-gray-50 text-center">
+        <section className="py-20 px-4 bg-gray-50 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
             Sports Focus Areas
           </h2>
