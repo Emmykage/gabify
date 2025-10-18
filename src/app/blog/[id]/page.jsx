@@ -70,7 +70,7 @@ const BlogDetails = () => {
                 (tag) => (
                   <span
                     key={tag}
-                    className="px-4 py-1 bg-alt font-semibold text-primary text-sm  rounded-full"
+                    className="px-4 py-1 bg-theme-bg font-semibold text-primary text-sm  rounded-full"
                   >
                     #{tag}
                   </span>
@@ -106,7 +106,7 @@ const BlogDetails = () => {
                 ].map((post) => (
                   <li
                     key={post}
-                    className="text-blue-600 hover:underline cursor-pointer"
+                    className="text-alt -600 hover:underline cursor-pointer"
                   >
                     {post}
                   </li>
@@ -130,7 +130,7 @@ const BlogDetails = () => {
                 />
                 <button
                   type="submit"
-                  className="bg-blue-600 flex-1 text-white px-4 rounded-r-lg hover:bg-blue-700"
+                  className="bg-alt -600 flex-1 text-white px-4 rounded-r-lg hover:bg-blue-700"
                 >
                   Subscribe
                 </button>

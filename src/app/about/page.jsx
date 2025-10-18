@@ -6,6 +6,7 @@ import titleBg from "@/assets/background/gabifyheader.jpg";
 import aboutImg from "@/assets/images/about-img.jpeg";
 import Footer from "@/components/footer/Footer";
 import { GiSelfLove } from "react-icons/gi";
+import SupportComponent from "@/components/support/SupportComponent";
 
 const about = () => {
   const points = [
@@ -168,30 +169,18 @@ const about = () => {
           </div>
         </div>
       </section>
-      <section className="bg-white py-20">
-        <div className="m-auto flex max-w-7xl justify-center items-center">
-          <div className="w-96 shrink-0 h-60 z-10">
-            <img
-              src={aboutImg.src}
-              className="w-full h-full object-cover"
-              alt="donation image"
-            />
-          </div>
-          <div className="border-4 -ml-20 border-gray-300 px-8 max-w-xl pl-24 w-full py-16">
-            <h5 className="text-3xl mt-0 mb-4 ml-auto font-bold">
-              Support Inclusion Through Sport
-            </h5>
+      <SupportComponent image={aboutImg.src}>
+        <h5 className="text-3xl mt-0 mb-4 ml-auto font-bold">
+          Support Inclusion Through Sport
+        </h5>
 
-            <p>
-              Your donation helps us empower people with disabilities to
-              discover strength, confidence, and community through sports. Every
-              contribution — big or small — brings us closer to a world where
-              everyone can play, compete, and belong.
-            </p>
-            <p>Join us in making sports a space for all.</p>
-          </div>
-        </div>
-      </section>
+        <p>
+          Your donation helps us empower people with disabilities to discover
+          strength, confidence, and community through sports. Every contribution
+          — big or small — brings us closer to a world where everyone can play,
+          compete, and belong.
+        </p>
+      </SupportComponent>
       <Footer />
     </main>
   );

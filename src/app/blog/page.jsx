@@ -3,6 +3,8 @@ import PageTitle from "@/components/pageTitle/PageTitle";
 import Link from "next/link";
 import React from "react";
 
+import blogImg from "@/assets/images/IMG_3580.jpeg";
+
 const posts = [
   {
     id: 1,
@@ -10,7 +12,7 @@ const posts = [
     date: "23rd of April",
     comments: 4,
     likes: 2,
-    image: "/images/blog1.jpg",
+    image: blogImg.src,
     excerpt:
       "Meet the passionate leaders driving our mission forward — ensuring inclusion and equality through every sporting event.",
   },
@@ -76,7 +78,7 @@ export default function BlogPage() {
                   </p>
                   <p className="text-gray-700 mb-4">{post.excerpt}</p>
                   <Link
-                    href={`/blog/${2}`}
+                    href={`/blog/${post.id}`}
                     className="text-blue-600 font-medium hover:underline"
                   >
                     Read More →

@@ -4,7 +4,7 @@ import Navbar from "@/components/nav/Navbar";
 import PageTitle from "@/components/pageTitle/PageTitle";
 import SectionTitle from "@/components/sectionTitles/sectionTitle";
 import React from "react";
-import teamImg from "@/assets/images/IMG_6313.jpeg";
+import teamImg from "@/assets/images/IMG_6190.jpeg";
 
 const GetInvolved = () => {
   return (
@@ -14,11 +14,11 @@ const GetInvolved = () => {
       <section className="py-20 px-4">
         <SectionTitle title={"Join Us"} />
         <div className="max-w-7xl m-auto grid gap-4 md:grid-cols-2">
-          <div className="h-96 ">
+          <div className="h-[800px] bg-red-400 w-full overflow-hidden rounded-lg">
             <img
               src={teamImg.src}
               alt="Team "
-              className="object-cover h-full w-full"
+              className="object-cover h-full w-full -20"
             />
           </div>
           <div>

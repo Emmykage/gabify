@@ -14,7 +14,8 @@ import Image from "next/image";
 import imgblog from "@/assets/images/IMG_6246.jpeg";
 import CTA from "@/components/CTA/CTA";
 import Testimonials from "@/components/testimonials/Testimonials";
-
+import aboutImg from "@/assets/images/IMG_8304.jpeg";
+import aboutImg2 from "@/assets/images/IMG_8287.jpeg";
 const HomePage = () => {
   const blogPosts = [
     {
@@ -85,14 +86,14 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2  gap-12 items-start">
           <div className="grid md:grid-cols-2 gap-4">
             <img
-              src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c"
+              src={aboutImg.src}
               alt="Sample"
               className="rounded object-cover sm:w-80 sm:h-40"
             />
             <div>
               <div>
                 <h3 className="text-2xl font-semibold text-gray-700 mb-4">
-                  Professional and personalised assistance
+                  About Gabify
                 </h3>
                 <p className="text-gray-600">
                   Gabify is a non-profit organization dedicated to integrating
@@ -103,7 +104,7 @@ const HomePage = () => {
               </div>
             </div>{" "}
             <img
-              src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c"
+              src={aboutImg2.src}
               alt="Sample"
               className="rounded object-cover sm:w-80 sm:h-40"
             />

@@ -9,6 +9,12 @@ import sportFestival from "@/assets/images/IMG_6313.jpeg";
 import Image from "next/image";
 import CTA from "@/components/CTA/CTA";
 import Navbar from "@/components/nav/Navbar";
+import aboutBanner from "@/assets/images/IMG_3585.jpeg";
+import athleticTraniningImg from "@/assets/images/ph_3184_11809.jpg";
+import schoolOutreach from "@/assets/images/IMG_6295.jpeg";
+import careerDevImg from "@/assets/images/IMG_8304.jpeg";
+import educationalSupportImg from "@/assets/images/IMG_3575.jpeg";
+import { motion } from "framer-motion";
 
 const programs = [
   {
@@ -64,12 +70,12 @@ const page = () => {
       <section
         className="relative h-[70vh] flex items-center justify-center text-center text-white"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/background/about-img.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${aboutBanner.src}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div>
+        <div className="bg-gray-900/60 rounded-lg py-10 px-6  bg-opacity-50">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Our Programs</h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto">
             Empowering para-athletes through training, education, and
@@ -91,7 +97,7 @@ const page = () => {
             },
             {
               title: "School Outreach",
-              image: kidBlind,
+              image: schoolOutreach,
               desc: "Partnering with schools to promote inclusive physical education.",
             },
             {
@@ -101,16 +107,16 @@ const page = () => {
             },
             {
               title: "Athletic Training",
-              image: imageProgram1,
+              image: athleticTraniningImg,
               desc: "Tailored training programs designed to enhance the skills and capabilities of para-athletes.",
             },
             {
               title: "Career Development:",
-              image: kidBlind,
+              image: careerDevImg,
               desc: "Assisting para-athletes in building careers beyond sports, recognizing the importance of life after competitive athletics.",
             },
             {
-              image: sportFestival,
+              image: educationalSupportImg,
               title: "Educational Support:",
               desc: "Scholarships, tutoring, and mentorship programs to ensure educational success alongside athletic pursuits.",
             },
