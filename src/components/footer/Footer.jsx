@@ -1,14 +1,42 @@
-import React from "react";
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await fetch("/api/posts");
+        const { data } = await response.json();
+        console.log(data);
+        setPosts(data);
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      } finally {
+        setLoading(false);
+      }
+    })();
+  }, []);
   return (
     <footer className="bg-gray-900 text-gray-300 py-12 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* About Section */}
         <div>
-          <h2 className="text-white text-xl font-semibold mb-4">Gabify</h2>
-          <p className="text-sm leading-relaxed">
+          <Link href="/" className="relative h-12 w-40 block mb-4">
+            <Image
+              fill
+              src="/logo.PNG"
+              alt="LOGO"
+              className="object-contain bg-white rounded-md"
+            />
+          </Link>
+          {/* <h2 className="text-white text-xl font-semibold mb-4">Gabify</h2> */}
+          <p className="text-sm leading-relaxed text-gray-200">
             A world where disability is not a limitation but a unique strength —
             where every individual can discover their potential through sports.
             {/* We are committed to empowering individuals with disabilities through
@@ -27,11 +55,11 @@ const Footer = () => {
             </li>
             <li className="flex items-center gap-3">
               <FaEnvelope className="text-orange-500" />
-              info@giving.com
+              <a href="mailto:info@gabify.com">info@gabify.com</a>
             </li>
             <li className="flex items-center gap-3">
               <FaPhoneAlt className="text-orange-500" />
-              800 516 3290
+              <a href="tel: 800 516 3290"> 800 516 3290</a>
             </li>
           </ul>
         </div>
@@ -42,24 +70,15 @@ const Footer = () => {
             From the Blog
           </h3>
           <ul className="space-y-4 text-sm">
-            <li>
-              <p className="font-medium text-white">Missioners in charge</p>
-              <span className="text-gray-400 text-xs">
-                23rd of April | 2 💬 4 ❤️
-              </span>
-            </li>
-            <li>
-              <p className="font-medium text-white">Celebrating the adoption</p>
-              <span className="text-gray-400 text-xs">
-                5th of April | 3 💬 1 ❤️
-              </span>
-            </li>
-            <li>
-              <p className="font-medium text-white">Charity for everyone</p>
-              <span className="text-gray-400 text-xs">
-                25th of April | 6 💬 18 ❤️
-              </span>
-            </li>
+            {posts?.map((post) => (
+              <li>
+                <p className="font-medium text-white">{post?.title}</p>
+                <span className="text-gray-400 text-xs">
+                  {post?.createdAt ?? "23rd of April"} | {post?.comments ?? 0}{" "}
+                  💬 {post?.likes ?? 0} ❤️
+                </span>
+              </li>
+            ))}
           </ul>
         </div>
 

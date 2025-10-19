@@ -1,22 +1,57 @@
+"use client";
 import Navbar from "@/components/nav/Navbar";
 import PageTitle from "@/components/pageTitle/PageTitle";
-import React from "react";
+import { useParams, useRouter } from "next/navigation";
+import React, { useEffect, useState } from "react";
 
 const BlogDetails = () => {
+  const { id } = useParams();
+  const router = useRouter();
+  const [post, setPost] = useState();
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await fetch(`/api/posts/${id}`);
+        const { data } = await response.json();
+        console.log(data);
+        setPost(data);
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      } finally {
+        setLoading(false);
+      }
+    })();
+  }, []);
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await fetch(`/api/posts`);
+        const { data } = await response.json();
+        console.log(data);
+        setPosts(data);
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      } finally {
+        setLoading(false);
+      }
+    })();
+  }, []);
+
+  console.log(posts);
+
   return (
     <>
       <Navbar />
-      <PageTitle
-        link={"blog"}
-        title={"Blog"}
-        subtitle={" Missioners in Charge"}
-      />
+      <PageTitle link={"blog"} title={"Blog"} subtitle={post?.title} />
 
       <section className="bg-theme-bg min-h-screen py-12 px-6 md:px-12">
         {/* Hero Banner */}
         <div className="max-w-6xl mx-auto mb-12">
           <img
-            src="/images/blog1.jpg"
+            src={post?.image}
             alt="Missioners in Charge"
             className="w-full h-[400px] object-cover rounded-2xl shadow-md"
           />
@@ -26,42 +61,19 @@ const BlogDetails = () => {
           {/* Article Section */}
           <article className="md:col-span-2">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Missioners in Charge
+              {post?.title}{" "}
             </h1>
 
             <div className="flex items-center gap-6 text-sm text-gray-500 mb-8">
-              <p>🗓️ 23rd of April, 2025</p>
-              <p>❤️ 2 Likes</p>
-              <p>💬 4 Comments</p>
+              <p>🗓️ {post?.title ?? "23rd of April, 2025"}</p>
+              <p>❤️ {post?.like ?? "2 Likes"}</p>
+              <p>💬 {post?.comments ?? "4 Comments"}</p>
             </div>
 
             <div className="prose prose-lg text-gray-700 max-w-none">
-              <p>
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos
-                dolores et quas molestias excepturi sint occaecati cupiditate
-                non provident, similique sunt in culpa qui officia deserunt
-                mollitia animi, id est laborum et dolorum fuga.
-              </p>
+              {/* */}
 
-              <p>
-                Our missioners lead community-driven initiatives to promote
-                inclusivity through sports. By providing mentorship, resources,
-                and training, they empower individuals with disabilities to
-                actively participate in athletics and personal development.
-              </p>
-
-              <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-600 my-6">
-                “Sports should be a bridge, not a barrier. Every athlete
-                deserves a chance to shine.”
-              </blockquote>
-
-              <p>
-                Through teamwork, resilience, and compassion, we aim to redefine
-                what’s possible. Our programs have reached dozens of
-                communities, transforming not only the lives of participants but
-                also their families and supporters.
-              </p>
+              {post?.content}
             </div>
 
             {/* Tags */}
@@ -99,16 +111,13 @@ const BlogDetails = () => {
                 Recent Posts
               </h3>
               <ul className="space-y-4">
-                {[
-                  "Celebrating the Adoption",
-                  "Charity for Everyone",
-                  "Inclusive Games 2025",
-                ].map((post) => (
+                {posts.slice(0, 2)?.map((post) => (
                   <li
-                    key={post}
+                    onClick={() => router.push(`/blog/${post.id}`)}
+                    key={post.id}
                     className="text-alt -600 hover:underline cursor-pointer"
                   >
-                    {post}
+                    {post.title}
                   </li>
                 ))}
               </ul>

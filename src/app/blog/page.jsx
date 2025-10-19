@@ -1,44 +1,30 @@
+"use client";
 import Navbar from "@/components/nav/Navbar";
 import PageTitle from "@/components/pageTitle/PageTitle";
 import Link from "next/link";
-import React from "react";
-
-import blogImg from "@/assets/images/IMG_3580.jpeg";
-
-const posts = [
-  {
-    id: 1,
-    title: "Missioners in Charge",
-    date: "23rd of April",
-    comments: 4,
-    likes: 2,
-    image: blogImg.src,
-    excerpt:
-      "Meet the passionate leaders driving our mission forward — ensuring inclusion and equality through every sporting event.",
-  },
-  {
-    id: 2,
-    title: "Celebrating the Adoption",
-    date: "5th of April",
-    comments: 1,
-    likes: 3,
-    image: "/images/blog2.jpg",
-    excerpt:
-      "A heartwarming story of empowerment and belonging, celebrating the integration of more athletes into our programs.",
-  },
-  {
-    id: 3,
-    title: "Charity for Everyone",
-    date: "25th of April",
-    comments: 18,
-    likes: 6,
-    image: "/images/blog3.jpg",
-    excerpt:
-      "We believe sports should unite people — join us as we make athletic dreams possible for persons with disabilities.",
-  },
-];
+import React, { useEffect, useState } from "react";
 
 export default function BlogPage() {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await fetch("/api/posts");
+        const { data } = await response.json();
+        console.log(data);
+        setPosts(data);
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      } finally {
+        setLoading(false);
+      }
+    })();
+  }, []);
+
+  // if (loading) return <p className="text-gray-400">Loading posts...</p>;
+
   return (
     <main>
       <Navbar />
