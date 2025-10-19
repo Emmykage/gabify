@@ -14,8 +14,10 @@ const PageTitle = ({ title, subtitle, titleBg, link }) => (
     <div className="bg-gray-900/80"></div>
     <h2 className="text-3xl font-bold text-gray-100 my-4">{title}</h2>
     <div className="max-w-7xl mx-6 px-4 flex text-white pt-10 border-white border-t justify-between md:m-auto">
-      <h3 className="text-4xl font-semibold">{subtitle ?? title}</h3>
-      <span className="text-xs">
+      <h3 className="text-4xl font-semibold hidden md:block">
+        {subtitle ?? title}
+      </h3>
+      <span className="text-xs hidden md:block">
         {" "}
         Home / <Link href={`/${link}`}>{link}</Link>{" "}
       </span>
