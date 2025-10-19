@@ -1,7 +1,7 @@
-import { useParams } from "react-router-dom";
-import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
-import BlogForm from "../components/BlogForm";
+import BlogForm from "@/components/formBlog/blogForm";
+import Sidebar from "@/components/sidebar/sidebar";
+import Topbar from "@/components/topbar/topbar";
+import { useParams } from "next/navigation";
 
 export default function EditPost() {
   const { id } = useParams();
