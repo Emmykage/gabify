@@ -1,5 +1,25 @@
 "use client";
+import { useState } from "react";
+import "trix";
+import "trix/dist/trix.css";
 export default function BlogForm({ onSubmit, defaultValues = {} }) {
+  const [imagePreviews, setImagePreviews] = useState([]);
+  const handleImageChange = (e) => {
+    const files = Array.from(e.target.files);
+    const previews = files.map((file) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      return new Promise((resolve) => {
+        reader.onload = () => {
+          resolve(reader.result);
+        };
+      });
+    });
+
+    Promise.all(previews).then((images) => {
+      setImagePreviews(images);
+    });
+  };
   return (
     <form
       onSubmit={(e) => {
@@ -25,7 +45,7 @@ export default function BlogForm({ onSubmit, defaultValues = {} }) {
           className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
         />
       </div>
-      <div>
+      {/* <div>
         <label className="block font-semibold mb-1">Content</label>
         <textarea
           name="content"
@@ -33,14 +53,32 @@ export default function BlogForm({ onSubmit, defaultValues = {} }) {
           defaultValue={defaultValues.content}
           className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
         />
-      </div>
+      </div> */}
+
       <div>
+        <label className="block font-semibold mb-1"> Content</label>
+        <input id="trix" type="hidden" name="content" />
+        <trix-editor input="trix" />
+      </div>
+      {/* <div>
         <label className="block font-semibold mb-1">Image URL</label>
         <input
           name="image"
           defaultValue={defaultValues.image}
           className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
         />
+      </div> */}
+
+      <div className="my-1">
+        <label className="block font-semibold mb-1">Image</label>
+        <input
+          onInput={handleImageChange}
+          className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
+          type="file"
+          accept="image/*"
+          name="image"
+          id="image"
+        />{" "}
       </div>
       <button
         type="submit"

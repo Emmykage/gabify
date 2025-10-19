@@ -5,10 +5,11 @@ import { set } from "mongoose";
 import { useState } from "react";
 
 export default function CreatePost() {
-  const [formData, setFormData] = useState(null);
+  // const [formData, setFormData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const handleSubmit = async (data) => {
+  const handleSubmit = async (formData) => {
+    console.log(formData);
     setLoading(true);
     try {
       const response = await fetch("/api/posts", {
