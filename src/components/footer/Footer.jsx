@@ -27,12 +27,15 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* About Section */}
         <div>
-          <Link href="/" className="relative h-12 w-40 block mb-4">
+          <Link
+            href="/"
+            className="relative h-12 w-40 block mb-4 overflow-hidden rounded-md"
+          >
             <Image
               fill
               src="/logo.PNG"
               alt="LOGO"
-              className="object-contain bg-white rounded-md"
+              className="object-contain bg-white rounded-md scale-150"
             />
           </Link>
           {/* <h2 className="text-white text-xl font-semibold mb-4">Gabify</h2> */}
@@ -71,8 +74,13 @@ const Footer = () => {
           </h3>
           <ul className="space-y-4 text-sm">
             {posts?.map((post) => (
-              <li>
-                <p className="font-medium text-white">{post?.title}</p>
+              <li key={post?.id}>
+                <Link
+                  href={`/blog/${post?.id}`}
+                  className="font-medium block hover:text-primary transition-all ease-in duration-200 text-white"
+                >
+                  {post?.title}
+                </Link>
                 <span className="text-gray-400 text-xs">
                   {post?.createdAt ?? "23rd of April"} | {post?.comments ?? 0}{" "}
                   💬 {post?.likes ?? 0} ❤️
@@ -87,7 +95,7 @@ const Footer = () => {
           <h3 className="text-white text-lg font-semibold mb-4">
             Our Happy Faces
           </h3>
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-3 gap-4">
             {[...Array(6)].map((_, i) => (
               <div
                 key={i}

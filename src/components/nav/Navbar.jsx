@@ -42,12 +42,15 @@ const Navbar = () => {
     <nav className="bg-black/60 shadow-md fixed w-full z-50 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="relative h-12 w-40">
+        <Link
+          href="/"
+          className="relative h-12 w-40 overflow-hidden rounded-md"
+        >
           <Image
             fill
             src="/logo.PNG"
             alt="LOGO"
-            className="object-contain bg-white rounded-md"
+            className="object-contain bg-white scale-150"
           />
         </Link>
 
