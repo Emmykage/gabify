@@ -1,3 +1,4 @@
+"use client";
 import BlogForm from "@/components/formBlog/blogForm";
 import Sidebar from "@/components/sidebar/sidebar";
 import Topbar from "@/components/topbar/topbar";
