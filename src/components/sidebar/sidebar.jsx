@@ -9,8 +9,12 @@ export default function Sidebar() {
   const { pathname } = usePathname();
 
   const links = [
-    { path: "/", label: "Dashboard", icon: <FiHome /> },
-    { path: "/create", label: "New Post", icon: <FiPlusCircle /> },
+    { path: "/administration", label: "Dashboard", icon: <FiHome /> },
+    {
+      path: "/administration/create",
+      label: "New Post",
+      icon: <FiPlusCircle />,
+    },
   ];
 
   return (

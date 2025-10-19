@@ -1,3 +1,4 @@
+"use client";
 export default function BlogForm({ onSubmit, defaultValues = {} }) {
   return (
     <form
@@ -13,6 +14,14 @@ export default function BlogForm({ onSubmit, defaultValues = {} }) {
         <input
           name="title"
           defaultValue={defaultValues.title}
+          className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+      <div>
+        <label className="block font-semibold mb-1">Excerpt</label>
+        <input
+          name="excerpt"
+          defaultValue={defaultValues.excerpt}
           className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
         />
       </div>

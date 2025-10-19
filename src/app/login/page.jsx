@@ -10,7 +10,6 @@ export default function LoginPage() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch("/api/login", {
         method: "POST",
@@ -22,7 +21,7 @@ export default function LoginPage() {
       }
       localStorage.setItem("adminToken", data.token || "");
       console.log("first", data.token);
-      router.push("/admin");
+      router.push("/administration");
     } catch (err) {
       setError(err.message ?? "Login failed");
     }

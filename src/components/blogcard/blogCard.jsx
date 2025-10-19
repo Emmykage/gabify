@@ -11,9 +11,9 @@ export default function BlogCard({ post }) {
       <h3 className="text-lg font-semibold mt-3">{post.title}</h3>
       <p className="text-gray-600 text-sm line-clamp-2">{post.excerpt}</p>
       <div className="mt-4 flex justify-between items-center">
-        <span className="text-gray-400 text-xs">{post.date}</span>
+        <span className="text-gray-400 text-xs">{post?.date}</span>
         <Link
-          href={`/admin/edit/${post.id}`}
+          href={`/administration/edit/${post.id}`}
           className="text-blue-600 hover:text-blue-800 font-medium text-sm"
         >
           Edit
