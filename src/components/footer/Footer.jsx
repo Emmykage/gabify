@@ -54,7 +54,7 @@ const Footer = () => {
           <ul className="space-y-3 text-sm">
             <li className="flex items-start gap-3">
               <FaMapMarkerAlt className="text-orange-500 mt-1" />
-              12 Ave., New York
+              Suit 212,411 Plaza. No 6,Lobito Crescent, wuse2 Abuja{" "}
             </li>
             <li className="flex items-center gap-3">
               <FaEnvelope className="text-orange-500" />
@@ -62,7 +62,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center gap-3">
               <FaPhoneAlt className="text-orange-500" />
-              <a href="tel: 800 516 3290"> 800 516 3290</a>
+              <a href="tel:+2347039431148,"> +2347039431148,</a>
             </li>
           </ul>
         </div>
