@@ -1,6 +1,7 @@
 export const users = [
   {
-    email: "admin@example.com",
+    email: "admin@gabify.com",
     password: "password123",
+    token: "admin-token-xyz",
   },
 ];

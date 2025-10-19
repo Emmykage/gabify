@@ -8,15 +8,23 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    // Simple mock login (replace with real API call)
-    if (email === "admin@example.com" && password === "password123") {
-      localStorage.setItem("adminToken", "logged-in");
+    try {
+      const response = await fetch("/api/login", {
+        method: "POST",
+        body: JSON.stringify({ email, password }),
+      });
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || "Invalid credentials");
+      }
+      localStorage.setItem("adminToken", data.token || "");
+      console.log("first", data.token);
       router.push("/admin");
-    } else {
-      setError("Invalid credentials");
+    } catch (err) {
+      setError(err.message ?? "Login failed");
     }
   };
 

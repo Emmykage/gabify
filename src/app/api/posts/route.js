@@ -22,7 +22,6 @@ export async function GET(request) {
   try {
     // await connectToDatabase();
 
-    // ✅ Optional: get query params (e.g., ?limit=10)
     const { searchParams } = new URL(request.url);
     const limit = parseInt(searchParams.get("limit")) || 0;
     const search = searchParams.get("search") || "";
