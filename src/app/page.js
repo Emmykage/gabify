@@ -5,7 +5,7 @@ import Header from "@/components/header/header";
 import CausesSection from "@/components/progressSection/ProgressSection";
 import SectionTitle from "@/components/sectionTitles/sectionTitle";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import imageProgram1 from "@/assets/images/IMG_6201.jpeg";
 import sportVector from "@/assets/svg/gym-running-foot-run-svgrepo-com.svg";
 import kidBlind from "@/assets/images/vissionkid.webp";
@@ -17,6 +17,21 @@ import Testimonials from "@/components/testimonials/Testimonials";
 import aboutImg from "@/assets/images/IMG_8304.jpeg";
 import aboutImg2 from "@/assets/images/IMG_8287.jpeg";
 const HomePage = () => {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await fetch("/api/posts");
+        const { data } = await response.json();
+        setPosts(data);
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      } finally {
+        setLoading(false);
+      }
+    })();
+  }, []);
   const blogPosts = [
     {
       id: 1,
@@ -230,25 +245,25 @@ const HomePage = () => {
 
         {/* Blog Grid */}
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-          {blogPosts.map((post) => (
+          {posts.map((post) => (
             <div
               key={post.id}
               className="bg-white group rounded-2xl shadow-md hover:shadow-lg transition overflow-hidden"
             >
               <div className="w-full h-56 overflow-hidden">
                 <img
-                  src={post.image}
-                  alt={post.title}
+                  src={post?.image}
+                  alt={post?.title}
                   className=" object-cover h-full w-full group-hover:scale-110 transition-all duration-500 "
                 />
               </div>
               <div className="p-6 flex flex-col">
-                <p className="text-sm text-gray-400 mb-2">{post.date}</p>
+                <p className="text-sm text-gray-400 mb-2">{post?.createdat}</p>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  {post.title}
+                  {post?.title}
                 </h3>
                 <p className="text-gray-600 text-sm mb-5  h-full ">
-                  {post.description}
+                  {post?.excerpt}
                 </p>
                 <Button
                   onClick={() => router.push(`/blog/${post.id}`)}

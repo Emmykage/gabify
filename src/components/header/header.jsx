@@ -6,6 +6,7 @@ import headerBg1 from "@/assets/images/IMG_6295.jpeg";
 
 import "hero-slider/dist/index.css";
 import HeroSlider, { MenuNav, Nav, Overlay, SideNav, Slide } from "hero-slider";
+import Link from "next/link";
 
 const Header = () => {
   const [deviceType, setdeviceType] = useState("windows");
@@ -39,12 +40,18 @@ const Header = () => {
             </p>
 
             <div className="flex gap-4 my-4">
-              <button className="bg-orange-600 px-4 py-2 rounded-lg text-sm">
+              <Link
+                href={"/blog"}
+                className="bg-orange-600 px-4 py-2 rounded-lg text-sm"
+              >
                 Read More
-              </button>
-              <button className="bg- px-4 py-2 rounded-lg border  border-white  text-gray-200">
+              </Link>
+              <Link
+                href={"/about"}
+                className="bg- px-4 py-2 rounded-lg border  border-white  text-gray-200"
+              >
                 Our causes
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -66,12 +73,18 @@ const Header = () => {
             </p>
 
             <div className="flex gap-4 my-4">
-              <button className="bg-orange-600 px-4 py-2 rounded-lg text-sm">
+              <Link
+                href={"/blog"}
+                className="bg-orange-600 px-4 py-2 rounded-lg text-sm"
+              >
                 Read More
-              </button>
-              <button className="bg- px-4 py-2 rounded-lg border  border-white  text-gray-200">
+              </Link>
+              <Link
+                href={"/about"}
+                className="bg- px-4 py-2 rounded-lg border  border-white  text-gray-200"
+              >
                 Our causes
-              </button>
+              </Link>
             </div>
           </div>
         </div>

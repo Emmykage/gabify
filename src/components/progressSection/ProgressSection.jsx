@@ -104,10 +104,10 @@ const CausesSection = () => {
               </div>
 
               <p className="text-gray-600 mb-6 text-sm">
-                ${cause.donated.toLocaleString()} donated{" "}
+                NGN{cause.donated.toLocaleString()} donated{" "}
                 <span className="text-gray-400"> / </span>{" "}
                 <span className="text-orange-600 font-medium">
-                  ${cause.goal - cause.donated} to go
+                  NGN{cause.goal - cause.donated} to go
                 </span>
               </p>
 
