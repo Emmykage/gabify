@@ -29,33 +29,29 @@ const ContactUs = () => {
       <section className="max-w-7xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-12">
         {/* Left side - info */}
         <div className="space-y-6">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4">
-            Get in Touch
-          </h2>
+          <h2 className="text-3xl font-semibold text-alt mb-4">Get in Touch</h2>
           <p className="text-gray-600 leading-relaxed">
-            At Gabify Foundation, we’re always happy to connect with
-            individuals, organizations, and supporters who share our passion for
-            inclusive sports.
+            Join us in empower and uplift these athletes, fostering a more
+            inclusive and accessible world of sport
           </p>
 
           <div className="space-y-4">
             <div className="flex items-start gap-3">
               <FaMapMarkerAlt className="text-primary text-xl mt-1" />
               <p className="text-gray-700">
-                Plot C144 Church Street at Imeko Close (B&B Junction), Off
-                Sultan Dasuki Road, Phase 2, Site 2, Kubwa, Abuja.
+                Suit 212,411 Plaza. No 6,Lobito Crescent, wuse2 Abuja
               </p>
             </div>
             <div className="flex items-center gap-3">
               <FaPhoneAlt className="text-primary text-lg" />
               <p className="text-gray-700">
                 Home & Office:{" "}
-                <span className="font-medium">+234 800 000 0000</span>
+                <span className="font-medium">07039431148, 0806 9032120 </span>
               </p>
             </div>
             <div className="flex items-center gap-3">
               <FaEnvelope className="text-primary text-lg" />
-              <p className="text-gray-700">info@guardianangelschool.com</p>
+              <p className="text-gray-700">gabifeanyiinnitiative@gmail.com</p>
             </div>
             <div className="flex items-center gap-3">
               <FaClock className="text-primary text-lg" />
