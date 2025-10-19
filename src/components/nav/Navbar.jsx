@@ -2,12 +2,13 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { MdClose } from "react-icons/md";
 import { CiMenuFries } from "react-icons/ci";
 
 const Navbar = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -56,16 +57,20 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-gray-200 font-medium">
-          {navLinks.map(({ href, label }) => (
-            <li key={href}>
-              <Link
-                href={href}
-                className="hover:text-blue-500 transition-colors duration-200"
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
+          {navLinks.map(({ href, label }) => {
+            const isActive = pathname === href;
+
+            return (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className={`${isActive ? "text-blue-500 " : ""} hover:text-blue-500 transition-colors duration-200`}
+                >
+                  {label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
         {/* Mobile Menu Button */}

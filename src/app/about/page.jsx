@@ -182,7 +182,6 @@ const about = () => {
           compete, and belong.
         </p>
       </SupportComponent>
-      <Footer />
     </main>
   );
 };
