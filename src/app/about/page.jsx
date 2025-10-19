@@ -32,8 +32,9 @@ const about = () => {
     },
   ];
   return (
-    <main className="about fixed h-screen w-full overflow-y-auto">
+    <main className="about">
       <Navbar />
+
       <PageTitle title="About Gabify" link={"about"} titleBg={titleBg} />
 
       <section id="about" className="py-20 px-4 bg-white">
