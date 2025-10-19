@@ -73,7 +73,10 @@ const BlogDetails = () => {
             <div className="prose prose-lg text-gray-700 max-w-none">
               {/* */}
 
-              {post?.content}
+              <div
+                className="mt-10"
+                dangerouslySetInnerHTML={{ __html: post?.content }}
+              />
             </div>
 
             {/* Tags */}
