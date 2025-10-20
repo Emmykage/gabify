@@ -33,8 +33,8 @@ const Header = () => {
       id: 1,
       title: "Hand to make better life for childer",
       info: () => (
-        <div className="md:m-auto sm:max-w-4xl mx-9  lg:max-w-7xl px-4 mt -20  text-white z-10   w-full">
-          <div className="max-w-xl py-10 px-4 bg-gray-600/30 rounded-xl pl-8">
+        <div className="max-w-7xl px-4  text-white z-10  m-auto  w-full">
+          <div className=" ml-auto max-w-xl py-10 bg-gray-600/50 rounded-xl pl pl-3 md:pl-8">
             <h3 className="text-white text-3xl font-bold tracking-wide">
               Hands That Build Brighter Futures{" "}
             </h3>
@@ -68,7 +68,7 @@ const Header = () => {
       title: "Give the girl child opportunity",
       info: () => (
         <div className="max-w-7xl px-4  text-white z-10  m-auto  w-full">
-          <div className=" ml-auto max-w-xl py-10 bg-gray-600/50 rounded-xl pl-8">
+          <div className=" ml-auto max-w-xl py-10 bg-gray-600/50 rounded-xl pl pl-3 md:pl-8">
             <h3 className="text-white text-3xl font-bold tracking-wide">
               Empower. Inspire. Achieve.
             </h3>
@@ -102,7 +102,7 @@ const Header = () => {
       title: "Give the girl child opportunity",
       info: () => (
         <div className="max-w-7xl px-4  text-white z-10  m-auto  w-full">
-          <div className="max-w- max-w-xl py-10 bg-gray-600/50 rounded-xl pl-8">
+          <div className="max-w-xl py-10 bg-gray-600/50 rounded-xl pl-3 md:pl-8">
             <h3 className="text-white text-3xl font-bold tracking-wide">
               A Chance to Dream Again{" "}
             </h3>
@@ -137,7 +137,7 @@ const Header = () => {
       title: "Give the girl child opportunity",
       info: () => (
         <div className="max-w-7xl px-4  text-white z-10  m-auto  w-full">
-          <div className="ml-auto max-w-xl py-10 bg-gray-600/50 rounded-xl pl-8">
+          <div className="ml-auto max-w-xl py-10 bg-gray-600/50 rounded-xl pl-3 md:pl-8">
             <h3 className="text-white text-3xl font-bold tracking-wide">
               Together, We Change Lives
             </h3>
@@ -171,7 +171,7 @@ const Header = () => {
       title: "Give the girl child opportunity",
       info: () => (
         <div className="max-w-7xl px-4  text-white z-10  m-auto  w-full">
-          <div className="max-w- max-w-xl py-10 bg-gray-600/50 rounded-xl pl-8">
+          <div className="max-w- max-w-xl py-10 bg-gray-600/50 rounded-xl pl-3 md:pl-8">
             <h3 className="text-white text-3xl font-bold tracking-wide">
               From Courage to Greatness
             </h3>
