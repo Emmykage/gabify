@@ -4,6 +4,8 @@ import SectionTitle from "@/components/sectionTitles/sectionTitle";
 import React from "react";
 import titleBg from "@/assets/background/gabifyheader.jpg";
 import aboutImg from "@/assets/images/about-img.jpeg";
+import aboutImg1 from "@/assets/images/WhatsApp Image 2025-10-20 at 12.21.59_b887d39f.jpg";
+
 import Footer from "@/components/footer/Footer";
 import { GiSelfLove } from "react-icons/gi";
 import SupportComponent from "@/components/support/SupportComponent";
@@ -44,7 +46,7 @@ const about = () => {
         />
         <div className="max-w-6xl mx-auto flex md:flex-row flex-col gap-12 items-start">
           <img
-            src={aboutImg.src}
+            src={aboutImg1.src}
             alt="Inclusive sports"
             className="rounded-2xl md:w-96 w-full md:order-1 order-2 shadow-lg"
           />{" "}

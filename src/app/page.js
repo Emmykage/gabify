@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import imageProgram1 from "@/assets/images/IMG_6201.jpeg";
 import sportVector from "@/assets/svg/gym-running-foot-run-svgrepo-com.svg";
-import kidBlind from "@/assets/images/vissionkid.webp";
+import schoolOutreach from "@/assets/images/IMG_6295.jpeg";
 import sportFestival from "@/assets/images/IMG_6313.jpeg";
 import Image from "next/image";
 import imgblog from "@/assets/images/IMG_6246.jpeg";
@@ -68,7 +68,7 @@ const HomePage = () => {
   ];
   const router = useRouter();
   return (
-    <div className="pt- about w-full top-0 left-0 h-screen overflow-y-auto ">
+    <div className="pt- about w-full top-0 left-0 ">
       <Header />
       <section className="bg-gray py-20 text-center px-4">
         <div className="max-w-7xl m-auto grid md:grid-cols-2">
@@ -214,7 +214,7 @@ const HomePage = () => {
             },
             {
               title: "School Outreach",
-              image: kidBlind,
+              image: schoolOutreach,
               desc: "Partnering with schools to promote inclusive physical education.",
             },
             {

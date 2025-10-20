@@ -5,15 +5,16 @@ import React from "react";
 import imageProgram1 from "@/assets/images/IMG_6201.jpeg";
 import sportVector from "@/assets/svg/gym-running-foot-run-svgrepo-com.svg";
 import kidBlind from "@/assets/images/vissionkid.webp";
-import sportFestival from "@/assets/images/IMG_6313.jpeg";
+import sportFestival from "@/assets/images/Community-sports-festival.jpg";
 import Image from "next/image";
 import CTA from "@/components/CTA/CTA";
 import Navbar from "@/components/nav/Navbar";
 import aboutBanner from "@/assets/images/IMG_3585.jpeg";
-import athleticTraniningImg from "@/assets/images/ph_3184_11809.jpg";
+import athleticTraniningImg from "@/assets/images/WhatsApp Image 2025-10-20 at 12.15.18_04d7e3bc.jpg";
 import schoolOutreach from "@/assets/images/IMG_6295.jpeg";
 import careerDevImg from "@/assets/images/IMG_8304.jpeg";
-import educationalSupportImg from "@/assets/images/IMG_3575.jpeg";
+import educationalSupportImg from "@/assets/images/WhatsApp Image 2025-10-20 at 12.25.32_05c2ee4c.jpg";
+import educationalSupportImg1 from "@/assets/images/IMG_3575.jpeg";
 import { motion } from "framer-motion";
 
 const programs = [
@@ -125,16 +126,17 @@ const page = () => {
               key={i}
               className="bg-white shadow-lg group rounded-lg pb-10 overflow-hidden text-center   hover:shadow-xl transition"
             >
-              <div className="h-60 relative bg-gray-300 w-full">
+              <div className="h-60 relative overflow-hidden bg-gray-300 w-full">
                 {" "}
                 <Image
                   src={p.image}
                   fill
                   alt={p.title}
                   priority
-                  className="object-cover  group-hover:scale-110 transition-all duration-500 "
+                  className="object-cover object-top-right  group-hover:scale-110 transition-all duration-500 "
                 />
               </div>
+
               <div className="flex py-4 gap-4 justify-center items-center">
                 <Image
                   src={sportVector}
