@@ -40,7 +40,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-black/60 shadow-md fixed w-full z-50 backdrop-blur-md">
+    <nav className="bg-white/60 shadow-md fixed w-full z-50 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link
@@ -51,7 +51,7 @@ const Navbar = () => {
             fill
             src="/logo.PNG"
             alt="LOGO"
-            className="object-contain bg-white scale-150"
+            className="object-contain bg- white scale-[1.7]"
           />
         </Link>
 
@@ -64,7 +64,7 @@ const Navbar = () => {
               <li key={href}>
                 <Link
                   href={href}
-                  className={`${isActive ? "text-blue-500 " : ""} hover:text-blue-500 transition-colors duration-200`}
+                  className={`${isActive ? "text-blue-500 " : "text-gray-700"} hover:text-blue-500 font-medium transition-colors duration-200`}
                 >
                   {label}
                 </Link>
