@@ -4,7 +4,6 @@ import SectionTitle from "@/components/sectionTitles/sectionTitle";
 import React from "react";
 import imageProgram1 from "@/assets/images/IMG_6201.jpeg";
 import sportVector from "@/assets/svg/gym-running-foot-run-svgrepo-com.svg";
-import kidBlind from "@/assets/images/vissionkid.webp";
 import sportFestival from "@/assets/images/Community-sports-festival.jpg";
 import Image from "next/image";
 import CTA from "@/components/CTA/CTA";

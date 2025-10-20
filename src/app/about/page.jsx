@@ -55,8 +55,8 @@ const about = () => {
               Who <span className="text-primary"> We Are</span>
             </h3>
             <p className="text-gray-600 font-semibold">
-              Gabify is a non-profit organisation that helps para athletes
-              fulfil their full potential in their chosen sport and live a
+              We are a non-profit organisation that helps para athletes fulfil
+              their full potential in their chosen sport and live a
               self-sustaining existence. We've been assisting trusted,
               community-led handicapped people since 2021 by offering them with
               the tools, training, and support they need to make our world a

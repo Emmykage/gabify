@@ -1,9 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Navbar from "../nav/Navbar";
-import headerBg from "@/assets/background/gabifyheader.jpg";
+import headerBg from "@/assets/images/athletic.jpg";
 import headerBg1 from "@/assets/images/IMG_6295.jpeg";
 import headerBg2 from "@/assets/images/IMG_6199.jpeg";
+import headerBg3 from "@/assets/images/WhatsApp Image 2025-10-20 at 12.25.32_05c2ee4c.jpg";
 
 import "hero-slider/dist/index.css";
 import HeroSlider, { MenuNav, Nav, Overlay, SideNav, Slide } from "hero-slider";
@@ -90,7 +91,73 @@ const Header = () => {
           </div>
         </div>
       ),
+      image: headerBg.src,
+    },
+    {
+      id: 3,
+      title: "Give the girl child opportunity",
+      info: () => (
+        <div className="max-w-7xl px-4  text-white z-10  m-auto  w-full">
+          <div className="max-w- max-w-xl py-10 bg-gray-600/50 rounded-xl pl-8">
+            <h3 className="text-white text-3xl font-bold tracking-wide">
+              Give the girl child opportunity
+            </h3>
+            <p className="">
+              Every goood act is humanity. A mans true welth is hereafter is the
+              goood that he does in this world to his fellows{" "}
+            </p>
+
+            <div className="flex gap-4 my-4">
+              <Link
+                href={"/blog"}
+                className="bg-orange-600 px-4 py-2 rounded-lg text-sm"
+              >
+                Read More
+              </Link>
+              <Link
+                href={"/about"}
+                className="bg- px-4 py-2 rounded-lg border  border-white  text-gray-200"
+              >
+                Our causes
+              </Link>
+            </div>
+          </div>
+        </div>
+      ),
       image: headerBg1.src,
+    },
+    {
+      id: 4,
+      title: "Give the girl child opportunity",
+      info: () => (
+        <div className="max-w-7xl px-4  text-white z-10  m-auto  w-full">
+          <div className="max-w- max-w-xl py-10 bg-gray-600/50 rounded-xl pl-8">
+            <h3 className="text-white text-3xl font-bold tracking-wide">
+              Give the girl child opportunity
+            </h3>
+            <p className="">
+              Every goood act is humanity. A mans true welth is hereafter is the
+              goood that he does in this world to his fellows{" "}
+            </p>
+
+            <div className="flex gap-4 my-4">
+              <Link
+                href={"/blog"}
+                className="bg-orange-600 px-4 py-2 rounded-lg text-sm"
+              >
+                Read More
+              </Link>
+              <Link
+                href={"/about"}
+                className="bg- px-4 py-2 rounded-lg border  border-white  text-gray-200"
+              >
+                Our causes
+              </Link>
+            </div>
+          </div>
+        </div>
+      ),
+      image: headerBg3.src,
     },
   ];
   return (
@@ -128,11 +195,11 @@ const Header = () => {
           background={{
             backgroundImageSrc: item.image,
             backgroundAttachment: "fixed", // optional: nice parallax effect
-            backgroundPosition: "center 30%",
+            backgroundPosition: "center 80%",
             backgroundSize: "cover",
           }}
         >
-          <div className="min h-full bg-gray-900/30  flex  m-auto relative w-full justify-center items-center">
+          <div className="min h-full bg-gray-950/60  flex  m-auto relative w-full justify-center items-center">
             {item.info()}
           </div>
         </Slide>
