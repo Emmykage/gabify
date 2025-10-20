@@ -145,12 +145,12 @@ const HomePage = () => {
                   Professional and personalised assistance{" "}
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  We assist in telling our para athletes' stories in a clear and
-                  compelling manner, and we invite partners to support us. Our
-                  statistics and feedback reports assist us in learning and
-                  improving our support for individual para-athletes. Donations
-                  and grants from corporate relationships all across the world
-                  help 85 percent of Gabify para-athletes.{" "}
+                  We assist in telling our para athletes &apos; stories in a
+                  clear and compelling manner, and we invite partners to support
+                  us. Our statistics and feedback reports assist us in learning
+                  and improving our support for individual para-athletes.
+                  Donations and grants from corporate relationships all across
+                  the world help 85 percent of Gabify para-athletes.{" "}
                 </p>
               </div>
             </div>
