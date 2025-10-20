@@ -5,6 +5,8 @@ import headerBg from "@/assets/images/athletic.jpg";
 import headerBg1 from "@/assets/images/IMG_6295.jpeg";
 import headerBg2 from "@/assets/images/IMG_6199.jpeg";
 import headerBg3 from "@/assets/images/WhatsApp Image 2025-10-20 at 12.25.32_05c2ee4c.jpg";
+import headerBg4 from "@/assets/images/WhatsApp-Image-play.jpg";
+
 import "./style.scss";
 import "hero-slider/dist/index.css";
 import HeroSlider, { MenuNav, Nav, Overlay, SideNav, Slide } from "hero-slider";
@@ -196,7 +198,7 @@ const Header = () => {
           </div>
         </div>
       ),
-      image: headerBg3.src,
+      image: headerBg4.src,
     },
   ];
   return (
@@ -236,15 +238,6 @@ const Header = () => {
             backgroundImageSrc: item.image,
             backgroundAttachment: "fixed", // optional: nice parallax effect
             backgroundPosition: "center 80%",
-            backgroundSize: "cover",
-            backgroundImageSrc: item.image,
-            objectPosition: "center 80%",
-            objectFit: "cover",
-          }}
-          style={{
-            backgroundPosition: "center 80%",
-            backgroundSize: "cover",
-            backgroundAttachment: "fixed",
           }}
         >
           <div className="min h-full bg-gray-950/60  flex  m-auto relative w-full justify-center items-center">
