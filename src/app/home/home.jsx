@@ -133,15 +133,17 @@ const HomePage = () => {
               has impact for the cause of your choice.
             </p>
             <h3 className="text-primary font-semibold text-2xl mt-4">
-              Years of Experience
+              🌍 Empowering Change Across Nigeria{" "}
             </h3>
             <div>
               <div>
                 <p>
-                  We partner with over 320 amazing projects worldwide, and have
-                  given over $150 million in cash and product grants to other
-                  groups since 2011. We also operate our own dynamic suite of
-                  Signature Programs.{" "}
+                  At Gabify Nigeria, we proudly collaborate with dozens of
+                  impactful community programs nationwide, supporting
+                  initiatives that uplift lives and promote inclusion through
+                  sports and education. Since our inception, we’ve provided
+                  grants, training, and essential resources to help individuals
+                  and organizations thrive.
                 </p>
 
                 <ul className="space-y-3 list-disc list-inside">

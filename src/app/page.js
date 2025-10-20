@@ -16,6 +16,8 @@ import CTA from "@/components/CTA/CTA";
 import Testimonials from "@/components/testimonials/Testimonials";
 import aboutImg from "@/assets/images/IMG_8304.jpeg";
 import aboutImg2 from "@/assets/images/IMG_8287.jpeg";
+import { motion } from "framer-motion";
+
 const HomePage = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -32,6 +34,12 @@ const HomePage = () => {
       }
     })();
   }, []);
+
+  const fadeInUpVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.9 } },
+  };
+
   const blogPosts = [
     {
       id: 1,
@@ -98,7 +106,15 @@ const HomePage = () => {
           title="About Gabify"
           subtitle="Promoting inclusion and equality in sports"
         />
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2  gap-12 items-start">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.9 } },
+          }}
+          className="max-w-7xl mx-auto grid md:grid-cols-2  gap-12 items-start"
+        >
           <div className="grid md:grid-cols-2 gap-4">
             <img
               src={aboutImg.src}
@@ -107,10 +123,10 @@ const HomePage = () => {
             />
             <div>
               <div>
-                <h3 className="text-2xl font-semibold text-gray-700 mb-4">
+                <h3 className="text-xl font-semibold text-gray-700 mb-4">
                   About Gabify
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm ">
                   Gabify is a non-profit organization dedicated to integrating
                   people with disabilities into mainstream and adaptive sports.
                   We use the power of sports to build confidence, independence,
@@ -125,10 +141,10 @@ const HomePage = () => {
             />
             <div>
               <div>
-                <h3 className="text-2xl font-semibold text-gray-700 mb-4">
+                <h3 className="text-xl font-semibold text-gray-700 mb-4">
                   Professional and personalised assistance{" "}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm">
                   We assist in telling our para athletes' stories in a clear and
                   compelling manner, and we invite partners to support us. Our
                   statistics and feedback reports assist us in learning and
@@ -140,7 +156,7 @@ const HomePage = () => {
             </div>
           </div>
           <div className=" rounded-2xl">
-            <p>
+            <p className="mt-4 text-sm">
               When you give to Our humanity, you know your donation is making a
               difference. Whether you are supporting one of our Signature
               Programs or our carefully curated list of Gifts That Give More,
@@ -148,18 +164,22 @@ const HomePage = () => {
               has impact for the cause of your choice.
             </p>
             <h3 className="text-primary font-semibold text-2xl mt-4">
-              Years of Experience
+              🌍 Empowering Change Across Nigeria{" "}
             </h3>
             <div>
               <div>
-                <p>
-                  We partner with over 320 amazing projects worldwide, and have
-                  given over $150 million in cash and product grants to other
-                  groups since 2011. We also operate our own dynamic suite of
-                  Signature Programs.{" "}
+                <h4 className="font-semibold"> </h4>
+
+                <p className="mt-4 text-sm">
+                  At Gabify Nigeria, we proudly collaborate with dozens of
+                  impactful community programs nationwide, supporting
+                  initiatives that uplift lives and promote inclusion through
+                  sports and education. Since our inception, we’ve provided
+                  grants, training, and essential resources to help individuals
+                  and organizations thrive.
                 </p>
 
-                <ul className="space-y-3 list-disc list-inside">
+                <ul className="space-y-3 list-disc list-inside text-sm">
                   <li>This mistaken idea of denouncing pleasure</li>
                   <li>Master-builder of human happiness</li>
                   <li>Occasionally circumstances occur in toil</li>
@@ -168,7 +188,7 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Programs */}
@@ -177,7 +197,15 @@ const HomePage = () => {
           title="Our Programs"
           subtitle="Building skills, confidence, and community"
         />
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.9 } },
+          }}
+          className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8"
+        >
           {[
             {
               title: "Adaptive Sports Training",
@@ -195,7 +223,9 @@ const HomePage = () => {
               desc: "Events that celebrate diversity and inclusion through sports.",
             },
           ].map((p, i) => (
-            <div
+            <motion.div
+              variants={fadeInUpVariant}
+              transition={{ delay: 1 * i }}
               key={i}
               className="bg-white shadow-lg group rounded-lg pb-10 overflow-hidden text-center   hover:shadow-xl transition"
             >
@@ -222,9 +252,9 @@ const HomePage = () => {
                 </h3>
               </div>
               <p className="text-gray-600 font-medium">{p.desc}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       <AnalysisMeasure />

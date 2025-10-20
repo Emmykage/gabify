@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../nav/Navbar";
 import headerBg from "@/assets/background/gabifyheader.jpg";
 import headerBg1 from "@/assets/images/IMG_6295.jpeg";
+import headerBg2 from "@/assets/images/IMG_6199.jpeg";
 
 import "hero-slider/dist/index.css";
 import HeroSlider, { MenuNav, Nav, Overlay, SideNav, Slide } from "hero-slider";
@@ -56,7 +57,7 @@ const Header = () => {
           </div>
         </div>
       ),
-      image: headerBg.src,
+      image: headerBg2.src,
     },
     {
       id: 2,
@@ -127,7 +128,7 @@ const Header = () => {
           background={{
             backgroundImageSrc: item.image,
             backgroundAttachment: "fixed", // optional: nice parallax effect
-            backgroundPosition: "center center",
+            backgroundPosition: "center 30%",
             backgroundSize: "cover",
           }}
         >
