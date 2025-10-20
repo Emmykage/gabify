@@ -5,7 +5,7 @@ import headerBg from "@/assets/images/athletic.jpg";
 import headerBg1 from "@/assets/images/IMG_6295.jpeg";
 import headerBg2 from "@/assets/images/IMG_6199.jpeg";
 import headerBg3 from "@/assets/images/WhatsApp Image 2025-10-20 at 12.25.32_05c2ee4c.jpg";
-
+import "./style.scss";
 import "hero-slider/dist/index.css";
 import HeroSlider, { MenuNav, Nav, Overlay, SideNav, Slide } from "hero-slider";
 import Link from "next/link";
@@ -34,11 +34,12 @@ const Header = () => {
         <div className="md:m-auto sm:max-w-4xl mx-9  lg:max-w-7xl px-4 mt -20  text-white z-10   w-full">
           <div className="max-w-xl py-10 px-4 bg-gray-600/30 rounded-xl pl-8">
             <h3 className="text-white text-3xl font-bold tracking-wide">
-              Hand to make better life for childer
+              Hands That Build Brighter Futures{" "}
             </h3>
             <p className="">
-              Every goood act is humanity. A mans true welth is hereafter is the
-              goood that he does in this world to his fellows{" "}
+              Every act of kindness creates a ripple of hope. Together, we
+              uplift children and para-athletes across Nigeria to reach their
+              full potential.{" "}
             </p>
 
             <div className="flex gap-4 my-4">
@@ -65,13 +66,14 @@ const Header = () => {
       title: "Give the girl child opportunity",
       info: () => (
         <div className="max-w-7xl px-4  text-white z-10  m-auto  w-full">
-          <div className="max-w- max-w-xl py-10 bg-gray-600/50 rounded-xl pl-8">
+          <div className=" ml-auto max-w-xl py-10 bg-gray-600/50 rounded-xl pl-8">
             <h3 className="text-white text-3xl font-bold tracking-wide">
-              Give the girl child opportunity
+              Empower. Inspire. Achieve.
             </h3>
             <p className="">
-              Every goood act is humanity. A mans true welth is hereafter is the
-              goood that he does in this world to his fellows{" "}
+              We believe ability has no limits. Through sports, education, and
+              support, Gabify helps every para-athlete discover their power and
+              purpose.{" "}
             </p>
 
             <div className="flex gap-4 my-4">
@@ -100,11 +102,11 @@ const Header = () => {
         <div className="max-w-7xl px-4  text-white z-10  m-auto  w-full">
           <div className="max-w- max-w-xl py-10 bg-gray-600/50 rounded-xl pl-8">
             <h3 className="text-white text-3xl font-bold tracking-wide">
-              Give the girl child opportunity
+              A Chance to Dream Again{" "}
             </h3>
             <p className="">
-              Every goood act is humanity. A mans true welth is hereafter is the
-              goood that he does in this world to his fellows{" "}
+              Hope begins with opportunity. Your support helps us provide
+              training, education, and care for those who need it most.{" "}
             </p>
 
             <div className="flex gap-4 my-4">
@@ -125,19 +127,56 @@ const Header = () => {
         </div>
       ),
       image: headerBg1.src,
+      position: "center 20%",
     },
+
     {
       id: 4,
       title: "Give the girl child opportunity",
       info: () => (
         <div className="max-w-7xl px-4  text-white z-10  m-auto  w-full">
-          <div className="max-w- max-w-xl py-10 bg-gray-600/50 rounded-xl pl-8">
+          <div className="ml-auto max-w-xl py-10 bg-gray-600/50 rounded-xl pl-8">
             <h3 className="text-white text-3xl font-bold tracking-wide">
-              Give the girl child opportunity
+              Together, We Change Lives
             </h3>
             <p className="">
-              Every goood act is humanity. A mans true welth is hereafter is the
-              goood that he does in this world to his fellows{" "}
+              Compassion in action — that’s the heart of Gabify. Join us in
+              building a community where everyone belongs, thrives, and inspires
+              others.{" "}
+            </p>
+
+            <div className="flex gap-4 my-4">
+              <Link
+                href={"/blog"}
+                className="bg-orange-600 px-4 py-2 rounded-lg text-sm"
+              >
+                Read More
+              </Link>
+              <Link
+                href={"/about"}
+                className="bg- px-4 py-2 rounded-lg border  border-white  text-gray-200"
+              >
+                Our causes
+              </Link>
+            </div>
+          </div>
+        </div>
+      ),
+      image: headerBg3.src,
+    },
+    {
+      id: 5,
+      title: "Give the girl child opportunity",
+      info: () => (
+        <div className="max-w-7xl px-4  text-white z-10  m-auto  w-full">
+          <div className="max-w- max-w-xl py-10 bg-gray-600/50 rounded-xl pl-8">
+            <h3 className="text-white text-3xl font-bold tracking-wide">
+              From Courage to Greatness
+            </h3>
+            <p className="">
+              Every para-athlete has a story worth celebrating. We stand beside
+              them — breaking barriers, creating champions, and building a more
+              inclusive Nigeria.
             </p>
 
             <div className="flex gap-4 my-4">
@@ -188,6 +227,7 @@ const Header = () => {
       {/* </Overlay> */}
       {items.map((item) => (
         <Slide
+          className="custom-slide"
           key={item.id}
           shouldRenderMask
           navDescription="Home"
@@ -197,6 +237,14 @@ const Header = () => {
             backgroundAttachment: "fixed", // optional: nice parallax effect
             backgroundPosition: "center 80%",
             backgroundSize: "cover",
+            backgroundImageSrc: item.image,
+            objectPosition: "center 80%",
+            objectFit: "cover",
+          }}
+          style={{
+            backgroundPosition: "center 80%",
+            backgroundSize: "cover",
+            backgroundAttachment: "fixed",
           }}
         >
           <div className="min h-full bg-gray-950/60  flex  m-auto relative w-full justify-center items-center">

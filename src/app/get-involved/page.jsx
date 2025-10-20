@@ -4,7 +4,7 @@ import Navbar from "@/components/nav/Navbar";
 import PageTitle from "@/components/pageTitle/PageTitle";
 import SectionTitle from "@/components/sectionTitles/sectionTitle";
 import React from "react";
-import teamImg from "@/assets/images/IMG_6190.jpeg";
+import teamImg from "@/assets/images/WhatsApp.jpg";
 
 const GetInvolved = () => {
   return (

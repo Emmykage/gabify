@@ -1,0 +1,10 @@
+.hero-slider-slide-background {
+  img {
+    // object-fit: cover;
+    // object-position: center 70%;
+
+    &.top {
+      object-position: center 70%;
+    }
+  }
+}
