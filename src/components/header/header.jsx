@@ -245,7 +245,7 @@ const Header = () => {
           </div>
         </Slide>
       ))}
-      <Nav />
+      {/* <Nav /> */}
       <SideNav />
 
       <MenuNav />
