@@ -52,11 +52,11 @@ export const metadata = {
     images: ["/og-image.png"],
     creator: "@gabifyfoundation",
   },
-  icons: {
-    icon: "/favicon.png", // your site icon
-    apple: "/apple-touch-icon.png",
-    shortcut: "/favicon.ico",
-  },
+  // icons: {
+  //   icon: "/favicon.png", // your site icon
+  //   apple: "/apple-touch-icon.png",
+  //   shortcut: "/favicon.ico",
+  // },
   manifest: "/manifest.json",
 };
 
