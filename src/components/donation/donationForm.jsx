@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import Button from "../button/Button";
-
+import { useForm, ValidationError } from "@formspree/react";
 const DonationForm = () => {
+  const [state, handleSubmit] = useForm("xrbonaoq");
   const [amount, setAmount] = useState("");
   const presetAmounts = [10, 20, 50];
 
@@ -10,10 +10,16 @@ const DonationForm = () => {
     setAmount(value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Thank you for donating $${amount || "0"}!`);
-  };
+  if (state.succeeded) {
+    return (
+      <p className="text-center  text-4xl">Thank You for getting involved!</p>
+    );
+  }
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   alert(`Thank you for donating $${amount || "0"}!`);
+  // };
 
   return (
     <div>
@@ -32,9 +38,9 @@ const DonationForm = () => {
             {/* Donation Amount */}
             <div>
               <h3 className="font-semibold text-gray-800 mb-2">
-                How much would you like to donate?
+                Please Make a pledge and we will get in touch with you
               </h3>
-              <div className="flex gap-4 mb-4 flex-wrap">
+              {/* <div className="flex gap-4 mb-4 flex-wrap">
                 {presetAmounts.map((value) => (
                   <button
                     type="button"
@@ -49,16 +55,24 @@ const DonationForm = () => {
                     ${value}
                   </button>
                 ))}
-              </div>
+              </div> */}
 
-              <input
-                type="number"
-                placeholder="Your amount here (USD)"
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
-                className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
-                required
-              />
+              <div>
+                <input
+                  type="number"
+                  name="amount"
+                  placeholder="Your amount here (NGN)"
+                  value={amount}
+                  onChange={(e) => setAmount(e.target.value)}
+                  className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
+                  required
+                />
+                <ValidationError
+                  prefix="Amount"
+                  field="amount"
+                  errors={state.errors}
+                />
+              </div>
             </div>
 
             {/* Personal Info */}
@@ -67,30 +81,62 @@ const DonationForm = () => {
                 Personal Information
               </h3>
               <div className="grid md:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  placeholder="Your first name"
-                  className="px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="Your last name"
-                  className="px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
-                  required
-                />
-                <input
-                  type="tel"
-                  placeholder="Your phone"
-                  className="px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
-                  required
-                />
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
-                  required
-                />
+                <div>
+                  <input
+                    type="text"
+                    name="first_name"
+                    placeholder="Your first name"
+                    className="px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
+                    required
+                  />
+                  <ValidationError
+                    prefix="First"
+                    field="first_name"
+                    errors={state.errors}
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Your last name"
+                    className="px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
+                    required
+                    name="last_name"
+                  />
+                  <ValidationError
+                    prefix="Last_name"
+                    field="last_name"
+                    errors={state.errors}
+                  />
+                </div>
+                <div>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Your phone"
+                    className="px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
+                    required
+                  />
+                  <ValidationError
+                    prefix="Phone"
+                    field="phone"
+                    errors={state.errors}
+                  />
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Your email"
+                    className="px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
+                    required
+                    name="email"
+                  />
+                  <ValidationError
+                    prefix="Email"
+                    field="email"
+                    errors={state.errors}
+                  />
+                </div>
               </div>
             </div>
 
@@ -101,16 +147,23 @@ const DonationForm = () => {
               </h3>
               <textarea
                 placeholder="Additional information"
+                name="message"
                 rows="4"
                 className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
               ></textarea>
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
             </div>
 
             {/* Payment Option */}
             <div className="text-center mt-8">
-              <p className="text-gray-600 mb-4">We accept PayPal</p>
+              {/* <p className="text-gray-600 mb-4">We accept PayPal</p> */}
               <button
                 type="submit"
+                disabled={state.submitting}
                 className="bg-yellow-400 text-blue-900 font-semibold px-10 py-3 rounded-full shadow-lg hover:bg-yellow-500 transition duration-300"
               >
                 Donate Now

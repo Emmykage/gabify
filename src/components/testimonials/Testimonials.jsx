@@ -14,7 +14,7 @@ const Testimonials = () => {
           after my accident. Now I compete in wheelchair tournaments and mentor
           others.”
         </blockquote>
-        <p className="mt-4 font-semibold text-blue-700">— Tunde, Lagos</p>
+        <p className="mt-4 font-semibold text-blue-700">— Tunde, Abuja</p>
       </div>
     </section>
   );
