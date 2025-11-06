@@ -12,7 +12,9 @@ const DonationForm = () => {
 
   if (state.succeeded) {
     return (
-      <p className="text-center  text-4xl">Thank You for getting involved!</p>
+      <p className="text-center text-primary font-semibold  text-4xl">
+        Thank You For Getting Involved!
+      </p>
     );
   }
 
