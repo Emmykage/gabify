@@ -6,11 +6,14 @@ import headerBg1 from "@/assets/images/IMG_6295.jpeg";
 import headerBg2 from "@/assets/images/IMG_6199.jpeg";
 import headerBg3 from "@/assets/images/WhatsApp Image 2025-10-20 at 12.25.32_05c2ee4c.jpg";
 import headerBg4 from "@/assets/images/WhatsApp-Image-play.jpg";
+import headerBg5 from "@/assets/images/christmas-image.jpg";
+import headerBg6 from "@/assets/images/christmas-image-1.jpg";
 
 import "./style.scss";
 import "hero-slider/dist/index.css";
 import HeroSlider, { MenuNav, Nav, Overlay, SideNav, Slide } from "hero-slider";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   const [deviceType, setdeviceType] = useState("windows");
@@ -29,6 +32,95 @@ const Header = () => {
   }, []);
 
   const items = [
+    {
+      id: 6,
+      title: "Hand to make better life for childer",
+      info: () => (
+        <section className="bg-red-700 flex justify-center h-full w-full px-6 py-4">
+          {/* <div> */}
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+            {/* Left text */}
+            <div className="text-white py-14">
+              <span className="inline-block bg-white/20 px-4 py-1 rounded-full text-sm mb-4">
+                🎄 Christmas Special
+              </span>
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+                Share Love. Spread Joy. Make Christmas Meaningful.
+              </h2>
+              <p className="text-lg text-white/90 mb-6">
+                This Christmas, We are creating moments of joy for children and
+                para-athletes in need. Your support brings smiles, warmth, and
+                hope to those who need it most. <br />
+                Join us in making this festive season unforgettable for everyone
+                as we share laugher, fellowship anc christmas food gift i
+                special Picnics.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href={"/donate"}
+                  className="bg-white text-red-700 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition"
+                >
+                  Donate Now
+                </Link>
+                <Link
+                  href={"/contact"}
+                  className="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-red-700 transition"
+                >
+                  Become a Volunteer
+                </Link>
+              </div>
+            </div>
+
+            {/* Right visual */}
+            <div className="relative h-[600px] py-10 bg-gray-600/50 rounded-xl pl-3 md:pl-8">
+              <Image
+                src={headerBg5}
+                alt="Gabify Christmas Support"
+                fill
+                className="object-fill rounded-lg"
+                priority
+              />
+            </div>
+          </div>
+          {/* </div> */}
+        </section>
+      ),
+      // image: headerBg5.src,
+    },
+    // {
+    //   id: 7,
+    //   title: "Hand to make better life for childer",
+    //   info: () => (
+    //     <div className="max-w-7xl px-4  text-white z-10  m-auto  w-full">
+    //       <div className=" ml-auto max-w-xl py-10 bg-gray-600/50 rounded-xl pl pl-3 md:pl-8">
+    //         <h3 className="text-white text-3xl font-bold tracking-wide">
+    //           Hands That Build Brighter Futures{" "}
+    //         </h3>
+    //         <p className="">
+    //           Every act of kindness creates a ripple of hope. Together, we
+    //           uplift children and para-athletes across Nigeria to reach their
+    //           full potential.{" "}
+    //         </p>
+
+    //         <div className="flex gap-4 my-4">
+    //           <Link
+    //             href={"/blog"}
+    //             className="bg-orange-600 px-4 py-2 rounded-lg text-sm"
+    //           >
+    //             Read More
+    //           </Link>
+    //           <Link
+    //             href={"/about"}
+    //             className="bg- px-4 py-2 rounded-lg border  border-white  text-gray-200"
+    //           >
+    //             Our causes
+    //           </Link>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   ),
+    //   image: headerBg6.src,
+    // },
     {
       id: 1,
       title: "Hand to make better life for childer",
@@ -204,7 +296,7 @@ const Header = () => {
   return (
     <HeroSlider
       height={"100vh"}
-      autoplay
+      autoplay={false}
       slidingAnimation
       isSmartSliding
       initialSlide="2"

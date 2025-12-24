@@ -18,6 +18,8 @@ import aboutImg2 from "@/assets/images/IMG_8287.jpeg";
 import { motion } from "framer-motion";
 import schoolOutreach from "@/assets/images/IMG_6295.jpeg";
 import sportFestival from "@/assets/images/Community-sports-festival.jpg";
+import headerBg5 from "@/assets/images/christmas-image.jpg";
+import headerBg6 from "@/assets/images/christmas-image-1.jpg";
 
 const HomePage = () => {
   const [posts, setPosts] = useState([]);
@@ -97,6 +99,45 @@ const HomePage = () => {
               </Button>
             </div>
             <div></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-red-700  px-6 py-4">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+          {/* Left text */}
+          <div className="text-white py-14">
+            <span className="inline-block bg-white/20 px-4 py-1 rounded-full text-sm mb-4">
+              🎄 Christmas Special
+            </span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+              Share Love. Spread Joy. Make Christmas Meaningful.
+            </h2>
+            <p className="text-lg text-white/90 mb-6">
+              This Christmas, Gabify Foundation is bringing smiles to people
+              living with disabilities through food, fellowship, and thoughtful
+              gifts. Your support helps us create moments of dignity, inclusion,
+              and happiness.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <button className="bg-white text-red-700 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition">
+                Donate Now
+              </button>
+              <button className="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-red-700 transition">
+                Become a Volunteer
+              </button>
+            </div>
+          </div>
+
+          {/* Right visual */}
+          <div className="relative h-[600px] py-10 bg-gray-600/50 rounded-xl pl-3 md:pl-8">
+            <Image
+              src={headerBg6}
+              alt="Gabify Christmas Support"
+              fill
+              className="object-fill rounded-lg"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -190,6 +231,51 @@ const HomePage = () => {
             </div>
           </div>
         </motion.div>
+      </section>
+
+      <section className="bg-red-700 py-14 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+          {/* Left text */}
+          <div className="text-white">
+            <span className="inline-block bg-white/20 px-4 py-1 rounded-full text-sm mb-4">
+              🎄 Christmas Special
+            </span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+              Share Love. Spread Joy. Make Christmas Meaningful.
+            </h2>
+            <p className="text-lg text-white/90 mb-6">
+              This Christmas, Gabify Foundation is bringing smiles to people
+              living with disabilities through food, fellowship, and thoughtful
+              gifts. Your support helps us create moments of dignity, inclusion,
+              and happiness.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <button className="bg-white text-red-700 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition">
+                Donate Now
+              </button>
+              <button className="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-red-700 transition">
+                Become a Volunteer
+              </button>
+            </div>
+          </div>
+
+          {/* Right visual */}
+          <div className="flex justify-end">
+            <div className="bg-white rounded-2xl shadow-xl p-6 max-w-md w-full">
+              <p className="text-red-700 font-bold text-xl mb-2">
+                📅 27th December
+              </p>
+              <p className="text-gray-700 mb-4">
+                A Christmas Picnic of Love & Inclusion
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                <li>🍲 Foodstuffs & Refreshments</li>
+                <li>🎁 Gifts & Donations</li>
+                <li>🤝 Community & Fellowship</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Programs */}
