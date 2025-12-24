@@ -17,7 +17,7 @@ import aboutImg2 from "@/assets/images/IMG_8287.jpeg";
 import { motion } from "framer-motion";
 import schoolOutreach from "@/assets/images/IMG_6295.jpeg";
 import sportFestival from "@/assets/images/Community-sports-festival.jpg";
-import headerBg6 from "@/assets/images/christmas-image-1.JPG";
+import headerBg6 from "@/assets/images/christmas-image-1.jpg";
 
 const HomePage = () => {
   const [posts, setPosts] = useState([]);
