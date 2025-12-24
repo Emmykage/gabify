@@ -17,7 +17,6 @@ import aboutImg2 from "@/assets/images/IMG_8287.jpeg";
 import { motion } from "framer-motion";
 import schoolOutreach from "@/assets/images/IMG_6295.jpeg";
 import sportFestival from "@/assets/images/Community-sports-festival.jpg";
-import headerBg6 from "@/assets/images/christmas-image-1.jpg";
 
 const HomePage = () => {
   const [posts, setPosts] = useState([]);
@@ -130,7 +129,7 @@ const HomePage = () => {
           {/* Right visual */}
           <div className="relative h-[600px] py-10 bg-gray-600/50 rounded-xl pl-3 md:pl-8">
             <Image
-              src={headerBg6}
+              src={"/christmas-image-1.jpg"}
               alt="Gabify Christmas Support"
               fill
               className="object-fill rounded-lg"
