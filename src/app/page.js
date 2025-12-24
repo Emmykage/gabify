@@ -8,7 +8,6 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import imageProgram1 from "@/assets/images/IMG_6201.jpeg";
 import sportVector from "@/assets/svg/gym-running-foot-run-svgrepo-com.svg";
-// import sportFestival from "@/assets/images/IMG_6313.jpeg";
 import Image from "next/image";
 import imgblog from "@/assets/images/IMG_6246.jpeg";
 import CTA from "@/components/CTA/CTA";
@@ -18,8 +17,7 @@ import aboutImg2 from "@/assets/images/IMG_8287.jpeg";
 import { motion } from "framer-motion";
 import schoolOutreach from "@/assets/images/IMG_6295.jpeg";
 import sportFestival from "@/assets/images/Community-sports-festival.jpg";
-import headerBg5 from "@/assets/images/christmas-image.jpg";
-import headerBg6 from "@/assets/images/christmas-image-1.jpg";
+import headerBg6 from "@/assets/images/christmas-image-1.JPG";
 
 const HomePage = () => {
   const [posts, setPosts] = useState([]);

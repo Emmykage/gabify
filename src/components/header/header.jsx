@@ -6,7 +6,7 @@ import headerBg1 from "@/assets/images/IMG_6295.jpeg";
 import headerBg2 from "@/assets/images/IMG_6199.jpeg";
 import headerBg3 from "@/assets/images/WhatsApp Image 2025-10-20 at 12.25.32_05c2ee4c.jpg";
 import headerBg4 from "@/assets/images/WhatsApp-Image-play.jpg";
-import headerBg5 from "@/assets/images/christmas-image.jpg";
+import headerBg5 from "@/assets/images/christmas-image.JPG";
 
 import "./style.scss";
 import "hero-slider/dist/index.css";
