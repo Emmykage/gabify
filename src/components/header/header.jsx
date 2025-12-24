@@ -6,7 +6,6 @@ import headerBg1 from "@/assets/images/IMG_6295.jpeg";
 import headerBg2 from "@/assets/images/IMG_6199.jpeg";
 import headerBg3 from "@/assets/images/WhatsApp Image 2025-10-20 at 12.25.32_05c2ee4c.jpg";
 import headerBg4 from "@/assets/images/WhatsApp-Image-play.jpg";
-import headerBg5 from "@/assets/images/christmas-image.jpg";
 
 import "./style.scss";
 import "hero-slider/dist/index.css";
@@ -73,7 +72,7 @@ const Header = () => {
             {/* Right visual */}
             <div className="relative h-[600px] py-10 bg-gray-600/50 rounded-xl pl-3 md:pl-8">
               <Image
-                src={headerBg5}
+                src="/christmas.jpg"
                 alt="Gabify Christmas Support"
                 fill
                 className="object-fill rounded-lg"
